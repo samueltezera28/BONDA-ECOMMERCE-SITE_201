@@ -1,14 +1,13 @@
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');//extracts the entire body portion of an incoming request stream and exposes it on req.body
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const expressValidator = require("express-validator");//validate user data
 const express = require('express');
 const mongoose = require('mongoose');
-const morgan = require('morgan');
+const morgan = require('morgan');//is a Nodejs and Express middleware to log HTTP requests and errors, and simplifies the process.
 
 
 require('dotenv').config();
-
 
 
 // import routes

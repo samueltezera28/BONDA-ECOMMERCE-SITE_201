@@ -1,4 +1,4 @@
-const formidable = require("formidable");
+const formidable = require("formidable");//A Node.js module for parsing form data, especially file uploads.
 const _ = require("lodash");
 const fs = require('fs');
 const  Product = require("../models/product");
@@ -22,7 +22,7 @@ exports.read =(req,res)=> {
 }
 
 exports.create = (req, res)=>{
-    let form = new formidable.IncomingForm();
+    let form = new formidable.IncomingForm();//A Node.js module for parsing form data, especially file uploads.
     form.keepExtensions = true;
     form.parse(req,(err, fields,files)=>{
         if(err) {
@@ -98,7 +98,7 @@ exports.update = (req, res)=>{
 
 
         let product = req.product
-        product = _.extend(product, fields)
+        product = _.extend(product, fields)//lodash methods
 
         if(files.photo) {
            // console.log("photot: ", files.photo);
@@ -128,7 +128,7 @@ exports.update = (req, res)=>{
 exports.list = (req,res)=>{
     let order = req.query.order ? req.query.order: 'asc';
     let sortBy= req.query.sortBy ? req.query.sortBy: '_id';
-    let limit = req.query.limit ? parseInt(req.query.limit): 900;
+    let limit = req.query.limit ? parseInt(req.query.limit): 10;
 
     Product.find()
     .select("photo")
