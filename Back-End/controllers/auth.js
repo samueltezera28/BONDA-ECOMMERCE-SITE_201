@@ -53,18 +53,43 @@ exports.signout = (req,res) => {
     res.json({message:"Signout Success"});
 };
 
-exports.requireSignin = expressJwt({
+exports.requireSignin =
+ expressJwt({
     //??
     secret: process.env.JWT_Secret,
     algorithms: ["HS256"],
     userProperty:"auth",
 });
 
+// exports.requireSignin =function authenticateToken(req, res, next) {
+//     console.log("this is requireSignin")
+    
+//   const authHeader = req.headers['authorization']
+//   const token = authHeader && authHeader.split(' ')[1]
+//   console.log(authHeader)
+//   console.log(token)
+
+//   if (token == null) return res.sendStatus(401)
+
+//   jwt.verify(token, process.env.JWT_Secret, (err, user) => {
+//     console.log(err)
+
+//     if (err) return res.sendStatus(403)
+
+//     req.userr = user
+
+//     next()
+//   })
+// }
+
 exports.isAuth = (req, res, next) =>{
     let user = req.profile && req.auth && req.profile._id == req.auth._id;
-    if(!user){
+     console.log("hello")
+     console.log(req.profile._id)
+     console.log(req.auth._id)
+    if(!user || req.profile._id != req.tempid ){
         return res.status(403).json({
-            error:"Access denied"
+            error:"Accessd denied"
         });
     }
     next();

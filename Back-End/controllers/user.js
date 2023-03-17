@@ -9,6 +9,7 @@ exports.userById = (req,res,next,id) =>{
             });
         }
         req.profile = user;
+        req.tempid = id
         next();
     });
 };  
