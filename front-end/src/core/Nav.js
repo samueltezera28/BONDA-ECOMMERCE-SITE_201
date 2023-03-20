@@ -21,7 +21,7 @@ const Nav = () => {
         </Fragment>
       }
       <li>
-      <Link to='/dashboard'>Dashboard</Link>
+      <Link to='/user/dashboard'>Dashboard</Link>
       </li>
       {isAuthenticated() && (
           <li>

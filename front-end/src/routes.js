@@ -3,8 +3,10 @@ import Nav from './core/Nav';
 import Home from './core/Home';
 import Signin from './user/Signin';
 import Signup from './user/Signup';
-import UserDashBoard from './user/UserDashBoard';
 import PrivateRoute from './auth/PrivateRoute';
+import UserDashboard from './user/UserDashboard';
+import AdminRoute from './auth/AdminRoute';
+import AdminDashboard from './user/AdminDashboard';
 
 const handleRoutes = () => {
   return (
@@ -14,7 +16,8 @@ const handleRoutes = () => {
         <Route path='/' exact element={<Home />} />
         <Route path='/signin' exact element={<Signin />} />
         <Route path='/signup' exact element={<Signup />} />
-        <Route path='/dashboard' exact element={<PrivateRoute><UserDashBoard /></PrivateRoute>} />
+        <Route path='/user/dashboard' exact element={<PrivateRoute><UserDashboard /></PrivateRoute>} />
+        <Route path='/admin/dashboard' exact element={<AdminRoute><AdminDashboard /></AdminRoute>} />
       </Routes>
     </Router>
   )
