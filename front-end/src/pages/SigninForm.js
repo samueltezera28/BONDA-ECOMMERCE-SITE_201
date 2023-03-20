@@ -7,7 +7,6 @@ const SigninForm = ({ email, password }, handleChange, clickSubmit) => (
       <input type='text' placeholder='email' value={email} onChange={handleChange('email')}/>
       <input type='password' placeholder='password' value={password} onChange={handleChange('password')}/>
       <button style={loadingMode}>Submit</button>
-      <h3>text</h3>
     </form>
   </div>
 );
