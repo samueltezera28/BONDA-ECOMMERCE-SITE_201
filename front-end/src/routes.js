@@ -13,6 +13,7 @@ const handleRoutes = () => {
         <Route path='/' exact element={<Home />} />
         <Route path='/signin' exact element={<Signin />} />
         <Route path='/signup' exact element={<Signup />} />
+        <Route path='/dashboard' exact element={<UserDashBoard />} />
       </Routes>
     </Router>
   )

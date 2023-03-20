@@ -36,4 +36,30 @@ const SignupReq = async (user) => {
   }
 }
 
-export { SigninReq, SignupReq };
+const autheticate = (data, cb) => {
+  // checking the app is running on web browsers
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('jwt', JSON.stringify(data));
+    cb();
+  }
+};
+
+const isAuthenticated = () => {
+
+}
+
+const signout = async () => {
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('jwt') !== null) {
+      localStorage.removeItem('jwt');
+    };
+    try {
+      const response = await fetch(`${API}/signout`);
+      return response.json();
+    } catch (err) {
+      console.log(`Error: ${err}`)
+    }
+  }
+}
+
+export { SigninReq, SignupReq, autheticate, isAuthenticated, signout };

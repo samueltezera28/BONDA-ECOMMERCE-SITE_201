@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import '../styles/Nav.css';
+import { signout } from "../auth";
 
 const Nav = () => {
   return (
@@ -13,6 +14,9 @@ const Nav = () => {
       </li>
       <li>
         <Link to='/signup'>Signup</Link>
+      </li>
+      <li>
+        <Link to='/' onClick={signout}>Signout</Link>
       </li>
     </ul>
 

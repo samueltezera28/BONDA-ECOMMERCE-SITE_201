@@ -33,7 +33,7 @@ const Signup = () => {
   }
 
   return (
-    <Layout>
+    <Layout title='Registration'>
       {showLoading(loading)}
       {showError(error)}
       {showSuccess(success)}

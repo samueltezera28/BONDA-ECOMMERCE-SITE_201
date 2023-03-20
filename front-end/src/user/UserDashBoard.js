@@ -1,8 +1,10 @@
 import React from "react";
+import Layout from "../core/Layout";
 
 const UserDashBoard = () => {
   return (
-    <h1>This is signin</h1>
+    <Layout title='Dashboard'>
+    </Layout>
   )
 }
 

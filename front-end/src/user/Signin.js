@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import { Navigate } from 'react-router-dom';
 import Layout from "../core/Layout";
 import SigninForm from "../pages/SigninForm";
-import { SigninReq } from '../auth';
+import { SigninReq, autheticate } from '../auth';
 import { showError, showSuccess, showLoading } from "./Message";
 
 const Signin = () => {
@@ -29,7 +29,9 @@ const Signin = () => {
       if (data.error) {
         setValue({ ...values, loading: false, error: data.error, success: false });
       } else {
-        setValue({ ...values, loading: false, error: false, success: 'Signin Successfully', redirectToReferer: true });
+        autheticate(data, () => {
+          setValue({ ...values, loading: false, error: false, success: 'Signin Successfully', redirectToReferer: true });
+        })
       }
     })
   }
@@ -41,7 +43,7 @@ const Signin = () => {
   }
 
   return (
-    <Layout title='signin' description='Please Signin'>
+    <Layout title='Signin'>
       {showLoading(loading)}
       {showError(error)}
       {showSuccess(success)}
