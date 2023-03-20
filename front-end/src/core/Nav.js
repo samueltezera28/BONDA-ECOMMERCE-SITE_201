@@ -4,6 +4,13 @@ import WithRouter from "./WithRouter";
 import { signout, isAuthenticated } from "../auth";
 
 const Nav = () => {
+  let dashboard = 'user'
+
+  if (isAuthenticated()) {
+    const { user: { role } } = isAuthenticated();
+    dashboard = role === 1 ? 'admin' : 'user';
+  }
+
   return (
     <ul>
       <li>
@@ -20,13 +27,16 @@ const Nav = () => {
           </li>
         </Fragment>
       }
-      <li>
-      <Link to='/user/dashboard'>Dashboard</Link>
-      </li>
+
       {isAuthenticated() && (
-          <li>
-            <Link className='' to='/' onClick={signout}>Signout</Link>
-        </li>
+          <Fragment>
+            <li>
+              <Link className='' to='/' onClick={signout}>Signout</Link>
+            </li>
+            <li>
+              <Link to={`${dashboard}/dashboard`}>Dashboard</Link>
+          </li>
+      </Fragment>
         )}
     </ul>
 
