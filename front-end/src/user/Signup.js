@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import Layout from "../core/Layout";
 import SignupForm from "../pages/SiginupForm";
 
 const Signup = () => {
@@ -20,9 +21,9 @@ const Signup = () => {
     // SigninReq(values);
   }
   return (
-    <Fragment>
+    <Layout>
       {SignupForm({name, email, password}, handleChange, clickSubmit)}
-    </Fragment>
+    </Layout>
   )
 }
 

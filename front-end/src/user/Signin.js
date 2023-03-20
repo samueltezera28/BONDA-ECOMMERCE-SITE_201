@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 import { Navigate } from 'react-router-dom';
+import Layout from "../core/Layout";
 import SigninForm from "../pages/SigninForm";
 import { SigninReq } from '../auth';
 import { showError, showSuccess, showLoading } from "./Message";
@@ -40,13 +41,13 @@ const Signin = () => {
   }
 
   return (
-    <Fragment>
+    <Layout title='signin' description='Please Signin'>
       {showLoading(loading)}
       {showError(error)}
       {showSuccess(success)}
       {SigninForm({email, password}, handleChange, clickSubmit)}
       {redirect()}
-    </Fragment>
+    </Layout>
   )
 }
 
