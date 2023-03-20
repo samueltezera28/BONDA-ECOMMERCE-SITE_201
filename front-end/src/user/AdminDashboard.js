@@ -13,6 +13,9 @@ const AdminDashboard = () => {
         <li>
           <Link to='/create/category'>Add Category</Link>
         </li>
+        <li>
+          <Link to='/create/product'>Add Product</Link>
+        </li>
       </ul>      
     </Layout>
   );
