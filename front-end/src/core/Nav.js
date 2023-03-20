@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { Link } from 'react-router-dom'
 import WithRouter from "./WithRouter";
-import '../styles/Nav.css';
 import { signout, isAuthenticated } from "../auth";
 
 const Nav = () => {
@@ -21,6 +20,9 @@ const Nav = () => {
           </li>
         </Fragment>
       }
+      <li>
+      <Link to='/dashboard'>Dashboard</Link>
+      </li>
       {isAuthenticated() && (
           <li>
             <Link className='' to='/' onClick={signout}>Signout</Link>
