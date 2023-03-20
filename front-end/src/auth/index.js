@@ -18,4 +18,22 @@ const SigninReq = async (user) => {
   }
 }
 
-export {SigninReq}
+const SignupReq = async (user) => {
+  const headers = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  };
+
+  try {
+    const response = await fetch(`${API}/signup`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(user)
+    });
+    return await response.json();
+  } catch (err) {
+    console.error(`Error: ${err.message}`);
+  }
+}
+
+export { SigninReq, SignupReq };

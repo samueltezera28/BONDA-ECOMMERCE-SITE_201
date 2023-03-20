@@ -16,12 +16,17 @@ const showSuccess = (success) => {
   }
 }
 
+let loadingMode = {};
+
 const showLoading = (loading) => {
   if (loading) {
+    loadingMode = { pointerEvents: 'none', backgroundColor: 'transparent' };
     return (
       <div>loading...</div>
     )
+  } else {
+    loadingMode = {};
   }
 }
 
-export { showSuccess, showError, showLoading };
+export { showSuccess, showError, showLoading, loadingMode };

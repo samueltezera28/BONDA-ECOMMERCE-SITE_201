@@ -1,11 +1,13 @@
 import React from "react";
+import { loadingMode } from "../user/Message";
 
 const SigninForm = ({ email, password }, handleChange, clickSubmit) => (
   <div>
     <form onSubmit={clickSubmit}>
       <input type='text' placeholder='email' value={email} onChange={handleChange('email')}/>
       <input type='password' placeholder='password' value={password} onChange={handleChange('password')}/>
-      <button>Submit</button>
+      <button style={loadingMode}>Submit</button>
+      <h3>text</h3>
     </form>
   </div>
 );
