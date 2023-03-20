@@ -36,17 +36,26 @@ const SignupReq = async (user) => {
   }
 }
 
-const autheticate = (data, cb) => {
+const autheticate = (data, callback) => {
   // checking the app is running on web browsers
   if (typeof window !== 'undefined') {
     localStorage.setItem('jwt', JSON.stringify(data));
-    cb();
+    callback();
   }
 };
 
 const isAuthenticated = () => {
-
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('jwt') !== undefined) {
+      return JSON.parse(localStorage.getItem('jwt'));
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
 }
+
 
 const signout = async () => {
   if (typeof window !== 'undefined') {
@@ -61,5 +70,6 @@ const signout = async () => {
     }
   }
 }
+
 
 export { SigninReq, SignupReq, autheticate, isAuthenticated, signout };

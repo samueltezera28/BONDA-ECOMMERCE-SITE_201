@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from 'react-router-dom'
+import WithRouter from "./WithRouter";
 import '../styles/Nav.css';
-import { signout } from "../auth";
+import { signout, isAuthenticated } from "../auth";
 
 const Nav = () => {
   return (
@@ -9,18 +10,25 @@ const Nav = () => {
       <li>
         <Link to='/'>Home</Link>
       </li>
-      <li>
-        <Link to='/signin'>Signin</Link>
-      </li>
-      <li>
-        <Link to='/signup'>Signup</Link>
-      </li>
-      <li>
-        <Link to='/' onClick={signout}>Signout</Link>
-      </li>
+      {
+        !isAuthenticated() &&
+        <Fragment>
+          <li>
+            <Link to='/signin'>Signin</Link> 
+          </li>
+          <li>
+            <Link to='/signup'>Signup</Link>
+          </li>
+        </Fragment>
+      }
+      {isAuthenticated() && (
+          <li>
+            <Link className='' to='/' onClick={signout}>Signout</Link>
+        </li>
+        )}
     </ul>
 
   );
 }
 
-export default Nav;
+export default WithRouter(Nav);
