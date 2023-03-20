@@ -8,7 +8,7 @@ const AdminDashboard = () => {
     <Layout title='Admin Dashboard'>
       <ul>
       <li>
-          <Link to='/user/dashboard'>Update Profile</Link>
+          <Link to='/user/dashboard'>Goto Profile</Link>
         </li>
         <li>
           <Link to='/create/category'>Add Category</Link>

@@ -18,7 +18,7 @@ const Signin = () => {
   const { email, password, loading, success, error, redirectToReferer } = values;
 
   const handleChange = name => event => {
-    setValue({...values, [name]: event.target.value });
+    setValue({...values, [name]: event.target.value, error: false, success: false });
   }
 
   const clickSubmit = (e) => {
