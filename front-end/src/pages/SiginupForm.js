@@ -6,7 +6,7 @@ const SignupForm = ({ name, email, password }, handleChange, clickSubmit) => (
   <form onSubmit={clickSubmit}>
 
     <div className="form mb-4">
-      <input type="text" id="form1Example1" className="form-control" placeholder="name"  value={name} onChange={handleChange('name')}/>
+      <input type="text" id="form1Example1" className="form-control" placeholder="Name"  value={name} onChange={handleChange('name')}/>
     </div>
 
     <div className="form mb-4">

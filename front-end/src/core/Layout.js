@@ -8,7 +8,7 @@ const Layout = ({
   children
 }) => (
   <div className={className}>
-    {title && <h2>{title}</h2>}
+    {title && <h2 className="text-info" style={{textAlign: 'center'}}>{title}</h2>}
     {description && <p>{description}</p>}
     <div>
       {children}
