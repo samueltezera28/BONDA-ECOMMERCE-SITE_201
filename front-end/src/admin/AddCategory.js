@@ -28,9 +28,9 @@ const AddCategory = () => {
     createCategory(_id, token, {name})
     .then(data => {
       if (data.error) {
-        setValues({ ...values, error: data.error, success: false, loading: false });
+        setValues({ ...values, error: 'Category already exists!', success: false, loading: false });
       } else {
-        setValues({ ...values, error: data.error, success: 'Category created!', loading: false });
+        setValues({ ...values, error: false, success: 'Category created!', loading: false });
       }
     }).catch(err => {
       console.log(`Error: ${err}`);

@@ -2,7 +2,7 @@ import React from "react";
 import { loadingMode } from "../user/Message";
 
 const SignupForm = ({ name, email, password }, handleChange, clickSubmit) => (
-  <div className="login-form">
+  <div className="form-mg">
   <form onSubmit={clickSubmit}>
 
     <div className="form mb-4">

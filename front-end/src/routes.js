@@ -10,7 +10,7 @@ import AdminDashboard from './user/AdminDashboard';
 import AddCategory from './admin/AddCategory';
 import AddProduct from './admin/AddProduct';
 import Products from './components/Products';
-import Footer from './pages/Footer';
+import Footer from './components/Footer';
 import Test from './pages/test';
 
 const handleRoutes = () => {
