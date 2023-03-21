@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from '../pages/Footer'
 
 const Layout = ({
   title,
@@ -12,6 +13,7 @@ const Layout = ({
     <div>
       {children}
     </div>
+    {/* {Footer} */}
   </div>
 )
 
