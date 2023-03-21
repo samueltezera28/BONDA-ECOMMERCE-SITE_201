@@ -84,9 +84,6 @@ exports.requireSignin =
 
 exports.isAuth = (req, res, next) =>{
     let user = req.profile && req.auth && req.profile._id == req.auth._id;
-     console.log("hello")
-     console.log(req.profile._id)
-     console.log(req.auth._id)
     if(!user || req.profile._id != req.tempid ){
         return res.status(403).json({
             error:"Accessd denied"
