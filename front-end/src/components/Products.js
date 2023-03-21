@@ -3,6 +3,7 @@ import axios from "axios";
 import Layout from "../core/Layout";
 import ProductPage from '../pages/ProductPage';
 import { ProductsReq, getProducts } from '../core/APICore'
+import CategoryNav from "./CategoryNav";
 
 const Products = () => {
 
@@ -18,7 +19,8 @@ const Products = () => {
 
 
   return (
-    <Layout title='Products'>
+    <Layout>
+      {CategoryNav()}
       {ProductPage(products)}
     </Layout>
   );

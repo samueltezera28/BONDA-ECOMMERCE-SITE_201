@@ -1,14 +1,14 @@
 import React from "react";
 
 const Layout = ({
-  title = 'Title',
+  title,
   description,
   className,
   children
 }) => (
   <div className={className}>
-    <h2>{title}</h2>
-    <p>{description}</p>
+    {title && <h2>{title}</h2>}
+    {description && <p>{description}</p>}
     <div>
       {children}
     </div>

@@ -1,2 +1,3 @@
-import App from './App.css'
-import Nav from './Nav.css' 
+import './App.css'
+import './Nav.css'
+import './Product.css'

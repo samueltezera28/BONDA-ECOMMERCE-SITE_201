@@ -1,9 +1,42 @@
-ul {
+.nav-t {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: auto;
+  background-color: #393E46;
+  color: white;
+  height: 50px;
 }
 
-li {
+.nav-t a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-b {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: 60px;
+  background-color: #ECF2FF;
+}
+
+.nav-b a {
+  text-decoration: none;
+  color: #393E46;
+}
+
+.nav-box ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.nav-box li {
   display: inline-block;
   padding: 10px;
+  margin: auto;
+}
+
+.nav-box .nav-r li {
+  padding-top: 14px;
 }
