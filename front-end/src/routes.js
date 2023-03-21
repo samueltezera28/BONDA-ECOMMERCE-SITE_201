@@ -4,7 +4,7 @@ import Home from "./core/Home";
 import Signin from "./user/Signin";
 import Signup from "./user/Signup";
 import PrivateRoute from "./auth/PrivateRoute";
-import UserDashboard from "./user/UserDashboard";
+import UserDashboard from "./user/UserDashBoard";
 import AdminRoute from "./auth/AdminRoute";
 import AdminDashboard from "./user/AdminDashboard";
 import AddCategory from "./admin/AddCategory";
