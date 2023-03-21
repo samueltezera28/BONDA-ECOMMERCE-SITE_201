@@ -30,17 +30,17 @@ const Nav = () => {
         <div>
           <ul>
             <li>
-              <a href='#'>About</a>
+              <a href='#footer'>About</a>
             </li>
             <li>
-              <a href='#'>Contact</a>
+              <a href='#footer'>Contact</a>
             </li>
             <li>
-              <a href='#'>Help Center</a>
+              <a href='#footer'>Help Center</a>
             </li>
             <li>
               <span style={{paddingRight: '5px'}}>Call Us</span>
-              <a href='#'>123-456-789</a>
+              <a href='#footer'>123-456-789</a>
             </li>
           </ul>
         </div>
