@@ -9,6 +9,7 @@ import AdminRoute from './auth/AdminRoute';
 import AdminDashboard from './user/AdminDashboard';
 import AddCategory from './admin/AddCategory';
 import AddProduct from './admin/AddProduct';
+import Products from './components/Products';
 
 const handleRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const handleRoutes = () => {
         <Route path='/admin/dashboard' exact element={<AdminRoute><AdminDashboard /></AdminRoute>} />
         <Route path='/create/category' exact element={<AdminRoute><AddCategory /></AdminRoute>} />
         <Route path='/create/product' exact element={<AdminRoute><AddProduct /></AdminRoute>} />
+        <Route path='/products' exact element={<Products />} />
       </Routes>
     </Router>
   )
