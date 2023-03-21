@@ -18,7 +18,7 @@
 }
 
 .ban-t1 h2 {
-  width: 250px;
+  width: 300px;
   height: 100px;
 }
 
@@ -30,7 +30,7 @@
 .ban-t1 {
   background-color: #2C3333;
   height: 200px;
-  width: 30%;
+  width: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@
 
 .best-s {
   height: 100vh;
-  background-color: #2C3333;
+  background-color: #293434;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@
 
 .p-cats {
   height: 100vh;
-  background-color: #757a7a;
+  background-color: #4d4f4f;
   width: 100%;
   display: flex;
   justify-content: center;

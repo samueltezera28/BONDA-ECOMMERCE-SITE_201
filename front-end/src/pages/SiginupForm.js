@@ -29,7 +29,7 @@ const SignupForm = ({ name, email, password }, handleChange, clickSubmit) => (
         <a href="#!">Forgot password?</a>
       </div>
     </div>
-    <button type="submit" className="btn btn-primary btn-block" style={loadingMode}>Sign in</button>
+    <button type="submit" className="btn btn-primary btn-block" style={loadingMode}>Sign up</button>
   </form>
 </div>
 );

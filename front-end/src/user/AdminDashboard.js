@@ -6,17 +6,40 @@ const AdminDashboard = () => {
   
   return (
     <Layout title='Admin Dashboard'>
-      <ul>
-      <li>
-          <Link to='/user/dashboard'>Goto Profile</Link>
-        </li>
-        <li>
-          <Link to='/create/category'>Add Category</Link>
-        </li>
-        <li>
-          <Link to='/create/product'>Add Product</Link>
-        </li>
-      </ul>      
+      <div className="a-dash hor-c-a">
+        <div className="info">
+            <h4>Service Manager</h4>
+            <div className="info-t">
+              <div className="info-l">
+                <ul>
+                  <li>
+                    <label>Product Manager</label>
+                  </li>
+                  <li>
+                    <label>Category Manager</label>
+                  </li>
+                  <li>
+                    <label>Goto Profile</label>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="info-r">
+                <ul>
+                  <li>
+                    <span><Link to='/create/product'>Add Product</Link></span>
+                  </li>
+                  <li>
+                    <span><Link to='/create/category'>Add Category</Link></span>
+                  </li>
+                  <li>
+                    <span><Link to='/user/dashboard'>My Profile</Link></span>
+                  </li>
+                </ul>  
+              </div>
+            </div>
+          </div>
+        </div> 
     </Layout>
   );
 }
