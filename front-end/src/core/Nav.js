@@ -50,7 +50,7 @@ const Nav = () => {
       <div className="nav-b">
         <div className="nav-l">
           <ul>
-            <li>
+            <li className="logo">
             <Link to='/'>BondaShop</Link>
             </li>
             <li>

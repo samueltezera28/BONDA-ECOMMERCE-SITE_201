@@ -4,12 +4,12 @@ import PhotoLoad from "./PhotoLoad";
 
 const Card = ({product}) => {
   return (
-    <div className="col-3">
+    <div className="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-2">
       <div className="card">
         <div className="card-header">
           { product.name }
         </div>
-        
+
         <div className="card-body">
           <PhotoLoad item={product}  url='product' />
           <p>{ product.description }</p>

@@ -26,7 +26,7 @@
   margin-top: 20px;
   color: black;
 }
-
+ 
 .ban-t1 {
   background-color: #2C3333;
   height: 200px;
@@ -40,19 +40,41 @@
 }
 
 .best-s {
-  height: 100vh;
-  background-color: #293434;
+  padding: 100px 10px 100px 10px;
+  background-color: #4d4f4f;
   width: 100%;
-  display: flex;
+  text-align: center;
+  /* display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; */
 }
 
 .p-cats {
-  height: 100vh;
+  padding: 100px 10px 100px 10px;
   background-color: #4d4f4f;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+}
+
+.fea-card {
+  background-color: #4d4f4f;
+  box-shadow: none;
+}
+
+.h-line {
+  background-color: red;
+  margin: 0;
+  padding: 1rem;
+}
+
+@media (max-width: 500px) {
+  .ban-t1 h2 {
+    width: 200px;
+    height: 100px;
+  }
+
+  .ban-t1 {
+    margin: auto;;
+  }
 }

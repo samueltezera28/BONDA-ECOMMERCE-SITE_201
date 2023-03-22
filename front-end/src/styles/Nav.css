@@ -40,3 +40,15 @@
 .nav-box .nav-r li {
   padding-top: 14px;
 }
+
+@media(max-width: 700px ){  
+  .nav-r {
+    display: none;
+  }
+}
+
+@media(max-width: 500px){
+  .nav-l .logo {
+    display: none;
+  }
+}

@@ -1,4 +1,8 @@
 import React from 'react';
+import Products from '../components/Products';
+import Card from '../components/Card';
+import { BestSeller, NewProduct } from '../components/FeaturedProducts';
+
 
 const HomePage = () => {
 
@@ -20,30 +24,13 @@ const HomePage = () => {
       </div>
 
       <div className='best-s'>
-        <div>
-          <h3>Best Sellers</h3>
-          <div className='best-its'>
-            {/* will be updated after product request handled */}
-            <div className='best-it'>
-              <div className='best-it-image'></div>
-              <p className='best-it-name'></p>
-              <p className='best-it-price'></p>
-            </div>
-          </div>
-        </div>
+        <h3>New Arrival</h3>
+        <BestSeller />
       </div>
-
+      <hr className='h-line' />
       <div className='p-cats'>
-        <div>
-          <h3>Shop by Category</h3>
-          <div className='c-its'>
-            {/* will be updated after category request handled */}
-            <div className='c-it'>
-              <div className='c-it-image'></div>
-              <p className='c-it-name'></p>
-            </div>
-          </div>
-        </div>
+        <h3>Best Seller</h3>
+        <NewProduct />
       </div>
 
     </div>

@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Layout from "../core/Layout";
-import ProductPage from '../pages/ProductPage';
 import { getProducts } from '../core/APICore'
-import CategoryNav from "./CategoryNav";
 import Card from "./Card";
 
 
