@@ -4,7 +4,7 @@ import PhotoLoad from "./PhotoLoad";
 
 const Card = ({product}) => {
   return (
-    <div className="col-4 mb-3">
+    <div className="col-3">
       <div className="card">
         <div className="card-header">
           { product.name }

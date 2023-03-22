@@ -45,18 +45,25 @@ const Products = () => {
 
   return (
     <Layout>
-      <p>New products</p>
+    <h3>New products</h3>
+    <div className="row ">
       {
         productByArrival.map((product, index) => (
           <Card key={index} product={product} />
         ))
       }
-      <p>Best Sellers</p>
+    </div>
+    
+    {/* <h3>Best Sellers</h3>
+    <div className="row">
       {
-        productBySell.map((product, index) => (
-          <Card key={index} product={product} />
-        ))
+          productBySell.map((product, index) => (
+            <Card key={index} product={product} />
+          ))
       }
+    </div> */}
+
+
     </Layout>
   );
 }
