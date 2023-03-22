@@ -131,7 +131,7 @@ exports.list = (req,res)=>{
     let limit = req.query.limit ? parseInt(req.query.limit): 10;
 
     Product.find()
-    .select("photo")
+    .select("-photo")
     .populate("category")
     .sort([[sortBy, order]])
     .limit(limit)
