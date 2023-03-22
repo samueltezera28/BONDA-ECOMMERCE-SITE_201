@@ -1,9 +1,9 @@
 import React from "react";
-import Dashboard from "../components/Dashboad";
+import NavTop from "../components/NavTop";
 
 const test = () => {
   return (
-    <Dashboard />
+    <NavTop />
   )
 }
 

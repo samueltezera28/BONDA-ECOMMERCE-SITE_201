@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import WithRouter from "./WithRouter";
 import { signout, isAuthenticated } from "../auth";
 import Search from "../components/Search";
+import NavTop from "../components/NavTop";
 
 const Nav = () => {
   let dashboard = 'user'
-
   if (isAuthenticated()) {
     const { user: { role } } = isAuthenticated();
     dashboard = role === 1 ? 'admin' : 'user';
@@ -16,41 +16,13 @@ const Nav = () => {
     <div className="nav-box">
 
       <div className="nav-t">
-        <div>
-          <ul>
-            <li>
-                <span></span>
-                <span>
-                  Bonda Makes you look good!
-                </span>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <ul>
-            <li>
-              <a href='#footer'>About</a>
-            </li>
-            <li>
-              <a href='#footer'>Contact</a>
-            </li>
-            <li>
-              <a href='#footer'>Help Center</a>
-            </li>
-            <li>
-              <span style={{paddingRight: '5px'}}>Call Us</span>
-              <a href='#footer'>123-456-789</a>
-            </li>
-          </ul>
-        </div>
-        
+        <NavTop />
       </div>
 
       <div className="nav-b">
         <div className="nav-l">
           <ul>
-            <li className="logo">
+            <li className="">
             <Link to='/'>BondaShop</Link>
             </li>
             <li>
