@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Link } from 'react-router-dom'
+import $ from 'jquery'
 import WithRouter from "./WithRouter";
 import { signout, isAuthenticated } from "../auth";
 import Search from "../components/Search";
@@ -12,7 +13,7 @@ const Nav = () => {
     dashboard = role === 1 ? 'admin' : 'user';
   }
 
-  return (
+  return ( 
     <div className="nav-box">
 
       <NavTop />
@@ -20,14 +21,16 @@ const Nav = () => {
       <div className="nav-b">
         <div className="nav-l">
           <ul>
-            <li className="">
-            <Link to='/'>BondaShop</Link>
-            </li>
-            <li>
-              {Search()}
-            </li>
+          <li>
+              <Link to='/' className="name">BondaShop</Link>
+          </li>
+          <li>
+            {Search()}
+          </li>
           </ul>
         </div>
+
+
         
         <div className="nav-r">
           <ul>
@@ -46,16 +49,13 @@ const Nav = () => {
               </Fragment>
             }
 
-            {isAuthenticated() && (
-              <Fragment>
-                <li>
-                  <Link className='' to='/' onClick={signout}>Signout</Link>
-                </li>
-                <li>
-                  <Link to={`${dashboard}/dashboard`}>Dashboard</Link>
+            {isAuthenticated() ? (
+              <li>
+                  <i className="fa-solid fa-user" id="user-dashboard"></i>
               </li>
-              </Fragment>
-            )}
+            ) :
+              <div id="user-dashboard"></div>
+            }
           </ul>  
         </div>
       </div>

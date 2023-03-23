@@ -41,14 +41,8 @@
   padding-top: 14px;
 }
 
-@media(max-width: 700px ){  
+@media(max-width: 450px ){  
   .nav-r {
-    display: none;
-  }
-}
-
-@media(max-width: 500px){
-  .nav-l .logo {
     display: none;
   }
 }

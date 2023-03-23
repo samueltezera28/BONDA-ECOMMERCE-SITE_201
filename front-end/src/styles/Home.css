@@ -83,3 +83,10 @@
     margin: auto;;
   }
 }
+
+@media (max-width: 500px) {
+  .ban-t1 {
+    height: 200px;
+    width: 250px;
+  }
+}

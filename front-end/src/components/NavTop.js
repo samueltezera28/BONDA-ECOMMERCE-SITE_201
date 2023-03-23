@@ -1,60 +1,52 @@
 import React from "react";
 import $ from 'jquery'
 import { Link } from "react-router-dom";
+import { signout } from "../auth";
 
 const NavTop = () => {
-
     $(document).ready(() => {
         const nav = document.getElementById("nav");
-      document.getElementById("svg").onclick = function () {
-          if (nav.style.display === "flex") {
-              nav.style.display = "none";
-              document.getElementById("svg").innerHTML =
-                  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>';
-          } else {
-              nav.style.display = "flex";
-              document.getElementById("svg").innerHTML =
-                  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>'
-          }
-      }
-      
-      const dash = document.getElementById("hidden-dashboard");
-      document.getElementById("user-dashboard").onclick = function () {
-          if (dash.style.display == "block")
-              dash.style.display = "none";
-          else
-              dash.style.display = "block"
-      }
-      
-      let progress = document.getElementById("progressbar");
-      let totalHeight = document.body.scrollHeight -
-          window.innerHeight;
-      window.onscroll = function () {
-          let progressHeight = (window.pageYOffset /
-              totalHeight) * 100;
-          progress.style.height = progressHeight + "%";
-      }
-      
-      
-      const btabs = document.getElementsByClassName("b-tab");
-      const bicons = document.getElementsByClassName("b-icon");
-      const btitles = document.getElementsByClassName("b-title");
-      for (let i = 0; i < btabs.length; i++) {
-      
-          btabs[i].onclick = function () {
-              for (let j = 0; j < btabs.length; j ++) {
-                  btabs[j].style.backgroundColor = "rgb(241, 239, 238)";
-                  bicons[j].style.backgroundColor = "rgb(241, 239, 238)";
-                  btitles[j].style.color = "black";
-              }
-              if ( btabs[i].style.backgroundColor == "rgb(241, 239, 238)") {
-                  btabs[i].style.backgroundColor = "rgb(51, 44, 57";
-                  btitles[i].style.color = "white";
-              } else {
-                  btabs[i].style.backgroundColor = "rgb(241, 239, 238)";
-              }
-          }
-      }
+        document.getElementById("more").onclick = function () {
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+                document.getElementById("more").innerHTML = '<li class="more"><i class="fa-solid fa-list"></i></li>'
+            } else {
+                nav.style.display = "flex";
+                document.getElementById("more").innerHTML = '<li class="more"><i class="fa-solid fa-x"></i></li>'
+            }
+        }
+        
+        const dash = document.getElementById("hidden-dashboard");
+        document.getElementById("user-dashboard").onclick = function () {
+            if (dash.style.display == "block")
+                dash.style.display = "none";
+            else
+                dash.style.display = "block"
+        }
+
+        document.getElementById("signout").onclick = function () {
+                dash.style.display = "none";
+        }
+        
+        const btabs = document.getElementsByClassName("b-tab");
+        const bicons = document.getElementsByClassName("b-icon");
+        const btitles = document.getElementsByClassName("b-title");
+        for (let i = 0; i < btabs.length; i++) {
+        
+            btabs[i].onclick = function () {
+                for (let j = 0; j < btabs.length; j ++) {
+                    btabs[j].style.backgroundColor = "rgb(241, 239, 238)";
+                    bicons[j].style.backgroundColor = "rgb(241, 239, 238)";
+                    btitles[j].style.color = "black";
+                }
+                if ( btabs[i].style.backgroundColor == "rgb(241, 239, 238)") {
+                    btabs[i].style.backgroundColor = "rgb(51, 44, 57";
+                    btitles[i].style.color = "white";
+                } else {
+                    btabs[i].style.backgroundColor = "rgb(241, 239, 238)";
+                }
+            }
+        }
     });
 
     const tabs = [
@@ -62,23 +54,27 @@ const NavTop = () => {
     { name: 'Contact', path: '#footer'},
     { name: 'Help Center', path: '#footer'},
     { name: 'Call Us', path: '#footer'},
-
     ];
     
+    const dashboard = [
+        { name: 'Profile', path: '/user/dashboard' },
+        { name: 'Admin', path: '/admin/dashboard' },
+        { name: 'Carts', path: '' },
+        { name: 'Dark Mode', path: '' },
+    ]
 
 
   return (
   <>
     <div id="mobile" className="mobile">
-        <div className="svg" id="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path
-                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-            </svg>
+        <div className="svg" id="more">
+            <li className="more">
+                <i class="fa-solid fa-list"></i>
+            </li>
         </div>
-        <div className="logo">
-            <span>My logo</span>
-        </div>
+        <ul><li>
+            <h2> <Link to='/'>BondaShop</Link> </h2>
+        </li></ul>
         <div></div>
     </div>
     
@@ -89,49 +85,29 @@ const NavTop = () => {
             </li>
         </ul>
         <ul className="nav-buttons">
-
             {
                 tabs.map((tab, i) => (
-                    <li className="nav-button">
+                    <li key={i} className="nav-button">
                         <div className="show-tab">
                             <Link to={tab.path}>{tab.name}</Link>
                         </div>
                     </li>
                 ))
             }
-
-
         </ul>
     </div>
 
-    <div>
-        <div className="user-dashboard" id="user-dashboard">
-            <span className="user-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                        d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                </svg>
-            </span>
-        </div>
-        <div className="hidden-dashboard" id="hidden-dashboard">
-            <ul className="goto-buttons">
-                <li>
-                    <a href="/alimama/dashboard.jsp">
-                        <button>Update</button>
-                    </a>
+    <div className="hidden-dashboard" id="hidden-dashboard">
+        <ul className="goto-buttons">
+            {dashboard.map((dash, i) => (
+                <li key={i}>
+                    <Link to={dash.path}>{dash.name}</Link>
                 </li>
-                <li>
-                    <a href="">
-                        <button>History</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="/alimama/signout.jsp">
-                        <button>Logout</button>
-                    </a>
-                </li>
-            </ul>
-        </div>
+            ))}
+            <li id="signout">
+                <Link to='/' onClick={signout}>Signout</Link>
+            </li>
+        </ul>     
     </div>
     
     <div className="b-bar">
