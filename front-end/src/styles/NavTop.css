@@ -41,6 +41,7 @@
     top: 90px;
     right: 10px;
     width: 200px;
+    z-index: 2000;
 }
 
 .hidden-dashboard ul {
@@ -54,19 +55,18 @@
 
 .b-bar {
     display: none;
-    height: 45px;
+    height: 50px;
     width: 100%;
-    background-color: #F0EEED;
-    display: none;
+    background-color: #ECF2FF;
     justify-content: space-between;
-    position: fixed; 
+    position: fixed;
     bottom: 0;
+    z-index: 2000;
 }
 
 .b-bar .b-tab {
     display: block;
     width: 20%;
-    background-color: #F0EEED;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -118,6 +118,7 @@
         top: 45px;
         width: 20%;
         box-shadow: 5px 2px 5px 2px #636262;
+        z-index: 2000;
     }
 
     .nav ul {
