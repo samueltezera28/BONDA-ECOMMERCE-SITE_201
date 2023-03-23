@@ -1,3 +1,17 @@
 .cat-nav {
   background-color: black;
 }
+
+.card-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-body i {
+  font-size: xx-large;
+}
+
+.card-p {
+  text-align: center;
+}

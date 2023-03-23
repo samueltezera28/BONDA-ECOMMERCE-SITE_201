@@ -36,31 +36,28 @@ const Products = () => {
   useEffect(() => {
     loadByArrival();
     loadBySell();
-    console.log(productByArrival);
   }, [])
 
 
   return (
     <Layout>
-    <h3>New products</h3>
-    <div className="row ">
-      {
-        productByArrival.map((product, index) => (
-          <Card key={index} product={product} />
-        ))
-      }
-    </div>
-    
-    {/* <h3>Best Sellers</h3>
-    <div className="row">
-      {
-          productBySell.map((product, index) => (
+    <div className="container">
+      <div className="row ">
+        {
+          productByArrival.map((product, index) => (
             <Card key={index} product={product} />
           ))
-      }
-    </div> */}
-
-
+        }
+      </div>
+      
+      <div className="row">
+        {
+            productBySell.map((product, index) => (
+              <Card key={index} product={product} />
+        ))
+        }
+      </div>
+    </div>
     </Layout>
   );
 }

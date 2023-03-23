@@ -14,7 +14,7 @@ const PhotoLoad = ({item, url}) => (
       <img  src={`${API}/${url}/photo/${item._id}`}
         alt={item.name}
         className='mb-3'
-        style={{maxHeight: "200px", maxWidth: "200px"}}
+        style={{maxHeight: "200px", maxWidth: "100%"}}
       />
     }
 

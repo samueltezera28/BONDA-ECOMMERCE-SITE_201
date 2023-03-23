@@ -9,7 +9,7 @@ const FeaturedCard = ({product}) => {
         <div className="card-body">
           <PhotoLoad item={product}  url='product' />
           <span>{ product.name }</span>
-          <Link to="/">
+          <Link to="/products">
             <p>View Product</p>
           </Link>
         </div>
