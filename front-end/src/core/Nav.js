@@ -15,9 +15,7 @@ const Nav = () => {
   return (
     <div className="nav-box">
 
-      <div className="nav-t">
-        <NavTop />
-      </div>
+      <NavTop />
 
       <div className="nav-b">
         <div className="nav-l">

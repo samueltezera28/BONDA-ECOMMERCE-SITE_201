@@ -17,7 +17,7 @@ const HomePage = () => {
                 on All Your
                 Favorite Clothes
               </h2>
-              <button type="button" class="btn btn-warning" data-mdb-ripple-color="light">Shop Now</button>
+              <button type="button" className="btn btn-warning" data-mdb-ripple-color="light">Shop Now</button>
             </div>
           </div>
         </div>

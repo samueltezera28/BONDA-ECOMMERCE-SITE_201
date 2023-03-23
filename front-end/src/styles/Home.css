@@ -60,6 +60,11 @@
 .fea-card {
   background-color: #4d4f4f;
   box-shadow: none;
+  z-index: 0;
+}
+
+.card {
+  z-index: 0;
 }
 
 .h-line {
