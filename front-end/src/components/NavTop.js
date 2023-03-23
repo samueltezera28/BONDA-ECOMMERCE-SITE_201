@@ -54,11 +54,11 @@ const NavTop = () => {
     ]
 
     const mobile = [
-        { name: 'Home', path: '', icon: <i class="fa-solid fa-house"></i>},
-        { name: 'Products', path: '/products', icon: <i class="fa-solid fa-shirt"></i>},
-        { name: 'Cart', path: '/cart', icon: <i class="fa-solid fa-cart-shopping"></i>},
-        { name: 'Dash', path: '/user/dashboard', icon: <i class="fa-solid fa-user"></i>},
-        { name: 'Admin', path: '/admin/dashboard', icon: <i class="fa-solid fa-lock"></i>},
+        { name: 'Home', path: '', icon: <i className="fa-solid fa-house"></i>},
+        { name: 'Products', path: '/products', icon: <i className="fa-solid fa-shirt"></i>},
+        { name: 'Cart', path: '/cart', icon: <i className="fa-solid fa-cart-shopping"></i>},
+        { name: 'Dash', path: '/user/dashboard', icon: <i className="fa-solid fa-user"></i>},
+        { name: 'Admin', path: '/admin/dashboard', icon: <i className="fa-solid fa-lock"></i>},
     ]
 
   return ( 
@@ -66,7 +66,7 @@ const NavTop = () => {
     <div id="mobile" className="mobile">
         <div className="svg" id="more">
             <li className="more">
-                <i class="fa-solid fa-list"></i>
+                <i className="fa-solid fa-list"></i>
             </li>
         </div>
         <ul><li>

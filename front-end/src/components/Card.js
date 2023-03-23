@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PhotoLoad from "./PhotoLoad";
+import Check from "./Check";
 
 const Card = ({product}) => {
   return (
@@ -23,7 +24,7 @@ const Card = ({product}) => {
             <Link to="/">
               <button className="btn btn-outline-primary">View Product</button>
             </Link>
-            <i class="fa-solid fa-plus"></i>
+            <i className="fa-solid fa-plus"></i>
           </div>
 
         </div>

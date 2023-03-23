@@ -63,13 +63,11 @@ const {
     const value = name === 'photo' ? event.target.files[0] : event.target.value;
     formData.set(name, value);
     setValues({ ...values, [name]: value, error: false, success: false });
-    console.log(values);
   }
 
   const clickSubmit = (e) => {
     e.preventDefault();
     setValues({ ...values, loading: true, error: false, success: false});
-    console.log(_id, token, formData)
     createProduct(_id, token, formData)
     .then(data => {
       if (data.error) {
