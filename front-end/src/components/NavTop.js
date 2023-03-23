@@ -27,26 +27,10 @@ const NavTop = () => {
         document.getElementById("signout").onclick = function () {
                 dash.style.display = "none";
         }
-        
-        const btabs = document.getElementsByClassName("b-tab");
-        const bicons = document.getElementsByClassName("b-icon");
-        const btitles = document.getElementsByClassName("b-title");
-        for (let i = 0; i < btabs.length; i++) {
-        
-            btabs[i].onclick = function () {
-                for (let j = 0; j < btabs.length; j ++) {
-                    btabs[j].style.backgroundColor = "rgb(241, 239, 238)";
-                    bicons[j].style.backgroundColor = "rgb(241, 239, 238)";
-                    btitles[j].style.color = "black";
-                }
-                if ( btabs[i].style.backgroundColor == "rgb(241, 239, 238)") {
-                    btabs[i].style.backgroundColor = "rgb(51, 44, 57";
-                    btitles[i].style.color = "white";
-                } else {
-                    btabs[i].style.backgroundColor = "rgb(241, 239, 238)";
-                }
-            }
-        }
+    });
+
+    $(window).scroll(function(){
+        $('#b-bar').css('position','fixed').css('bottom','0');
     });
 
     const tabs = [
@@ -64,13 +48,14 @@ const NavTop = () => {
     ]
 
     const mobile = [
-        { name: 'Home', path: '', icon: ''},
-        { name: 'Products', path: '/products'},
-        { name: 'Dashboard', path: '/user/dashboard' },
+        { name: 'Home', path: '', icon: <i class="fa-solid fa-house"></i>},
+        { name: 'Products', path: '/products', icon: <i class="fa-solid fa-shirt"></i>},
+        { name: 'Cart', path: '/cart', icon: <i class="fa-solid fa-cart-shopping"></i>},
+        { name: 'Dash', path: '/user/dashboard', icon: <i class="fa-solid fa-user"></i>},
+        { name: 'Admin', path: '/admin/dashboard', icon: <i class="fa-solid fa-lock"></i>},
     ]
 
-
-  return (
+  return ( 
   <>
     <div id="mobile" className="mobile">
         <div className="svg" id="more">
@@ -115,17 +100,19 @@ const NavTop = () => {
             </li>
         </ul>     
     </div>
-    
-    <div className="b-bar">
-        <div className="b-tab">
-            <ul>
-                <li>
-
-                </li>
-            </ul>
-
-        </div>
-        
+    <div className="b-bar" id='b-bar'>
+        <ul className="b-tab">
+            {
+                mobile.map((tab, i) => (
+                    <li key={i} className='tab-info'>
+                        <Link to={tab.path} className='tab-info'>
+                            {tab.icon}
+                            <span>{tab.name}</span>
+                        </Link>
+                    </li>
+                ))
+            }
+        </ul>
     </div>
   </>
 )}

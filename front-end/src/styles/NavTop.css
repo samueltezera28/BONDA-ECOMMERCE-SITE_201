@@ -55,47 +55,32 @@
 
 .b-bar {
     display: none;
-    height: 50px;
+    height: 45px;
     width: 100%;
-    background-color: #ECF2FF;
-    justify-content: space-between;
+    background-color: #ECF2FF;;
     position: fixed;
     bottom: 0;
     z-index: 2000;
+    overflow-x: auto;
 }
 
-.b-bar .b-tab {
-    display: block;
-    width: 20%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.b-bar .b-tab span {
-    font-size:x-small;
+.b-tab .tab-info {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 4px;
+    flex-direction: column;
+    margin-top: 2px;
 }
 
-.b-bar .b-tab div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.tab-info {
+    color: #393E46
 }
 
-.b-bar .b-tab svg {
-    height: 20px;
-    border-radius: 5px;
+.tab-info i {
+    font-size: large;
 }
 
-.s-tab {
-    background-color: red;
-}
-
-.d-tab {
-    border-right-color: #F0EEED;
+.tab-info span {
+    font-size: x-small;
 }
 
 @media only screen and (max-width: 950px) {
@@ -136,13 +121,7 @@
     .mobile .more {
         display: none;
     }
-
     .b-bar {
-        display: flex;
-        bottom: 0;
-    }
-
-    .logo {
         display: block;
     }
 }
