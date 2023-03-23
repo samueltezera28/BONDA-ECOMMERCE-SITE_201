@@ -27,6 +27,12 @@ const NavTop = () => {
         document.getElementById("signout").onclick = function () {
                 dash.style.display = "none";
         }
+
+        document.getElementById("goto-buttons").onclick = function () {
+            dash.style.display = "none";
+    }
+
+        
     });
 
     $(window).scroll(function(){
@@ -89,7 +95,7 @@ const NavTop = () => {
     </div>
 
     <div className="hidden-dashboard" id="hidden-dashboard">
-        <ul className="goto-buttons">
+        <ul className="goto-buttons" id='goto-buttons'>
             {dashboard.map((dash, i) => (
                 <li key={i}>
                     <Link to={dash.path}>{dash.name}</Link>
@@ -104,7 +110,7 @@ const NavTop = () => {
         <ul className="b-tab">
             {
                 mobile.map((tab, i) => (
-                    <li key={i} className='tab-info'>
+                    <li key={i}>
                         <Link to={tab.path} className='tab-info'>
                             {tab.icon}
                             <span>{tab.name}</span>
