@@ -56,6 +56,7 @@ const NavTop = () => {
     const mobile = [
         { name: 'Home', path: '', icon: <i className="fa-solid fa-house"></i>},
         { name: 'Products', path: '/products', icon: <i className="fa-solid fa-shirt"></i>},
+        { name: 'Shop', path: '/shop', icon: <i class="fa-solid fa-bag-shopping"></i>},
         { name: 'Cart', path: '/cart', icon: <i className="fa-solid fa-cart-shopping"></i>},
         { name: 'Dash', path: '/user/dashboard', icon: <i className="fa-solid fa-user"></i>},
         { name: 'Admin', path: '/admin/dashboard', icon: <i className="fa-solid fa-lock"></i>},

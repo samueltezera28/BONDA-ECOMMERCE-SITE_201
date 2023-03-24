@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
 import Nav from './core/Nav';
 import Home from './core/Home';
+import Shop from './components/Shop';
 import Signin from './user/Signin';
 import Signup from './user/Signup';
 import PrivateRoute from './auth/PrivateRoute';
@@ -21,6 +22,7 @@ const handleRoutes = () => {
           <Nav />
           <Routes>
             <Route path='/' exact element={<Home />} />
+            <Route path='/shop' exact element={<Shop />} />
             <Route path='/signin' exact element={<Signin />} />
             <Route path='/signup' exact element={<Signup />} />
             <Route path='/user/dashboard' exact element={<PrivateRoute><UserDashboard /></PrivateRoute>} />

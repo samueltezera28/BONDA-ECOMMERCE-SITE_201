@@ -1,15 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { getCategories } from '../core/APICore'
 
 const CategoryNav = () => {
+  // categories
 
-  const catNav = [
-    {name: 'Shop All', path: '/products'},
-    {name: 'Top Wear', path: '/products'},
-    {name: 'Bottom Wear', path: '/products'},
-    {name: 'Foot Wear', path: '/products'},
-    {name: 'Hoodies', path: '/products'},
-    {name: 'Jackets', path: '/products'},
-  ];
+  const [ cats, setCats ] = useState([]);
+  const [ id, setId ] = useState('');
+  const [ error, setError ] = useState(false);
+
+  const init = () => {
+    getCategories()
+    .then((data) => {
+      if (data.error) {
+        setError(data.error);
+      } else {
+        setCats(data);
+      }
+    })
+  }
+
+  useEffect(() => {
+    init();
+  }, [])
+
+  const handleClick = (id) => {
+    setId(id);
+    console.log(id);
+  }
+
+    const reloadPage = () => {
+
+    window.location.reload()
+
+  }
 
   return (
     <header className="mt=2">
@@ -26,9 +50,9 @@ const CategoryNav = () => {
         </button>
         <ul class="dropdown-menu">
         {
-          catNav.map((nav, i) => (
-            <li key={i}>
-              <a className="dropdown-item" aria-current="page" href={nav.path}>{nav.name}</a>
+          cats.map((nav, i) => (
+            <li key={i} onClick={reloadPage} >
+              <Link className="dropdown-item" aria-current="page" to={`/shop/?cid=${nav._id}`}>{nav.name}</Link>
             </li>
           ))
         }
@@ -36,21 +60,12 @@ const CategoryNav = () => {
         </ul>
       </div>
 
-
-
-
-
-
-
-
-
-
           <div className="collapse navbar-collapse" id="navbarExample01">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {
-                catNav.map((nav, i) => (
-                  <li className="nav-item active" key={i}>
-                    <a className="nav-link" aria-current="page" href={nav.path}>{nav.name}</a>
+                cats.map((nav, i) => (
+                  <li  onClick={reloadPage} className="nav-item active mx-2" key={i}>
+                  <Link className="dropdown-item" aria-current="page" to={`/shop/?cid=${nav._id}`}>{nav.name}</Link>
                   </li>
                 ))
               }
