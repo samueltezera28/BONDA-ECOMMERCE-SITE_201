@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import { Navigate } from 'react-router-dom';
 import Layout from "../core/Layout";
 import SigninForm from "../pages/SigninForm";
-import { SigninReq, autheticate } from '../auth';
+import { SigninReq, autheticate, isAuthenticated } from '../auth';
 import { showError, showSuccess, showLoading } from "./Message";
 
 const Signin = () => {
@@ -16,6 +16,8 @@ const Signin = () => {
   });
 
   const { email, password, loading, success, error, redirectToReferer } = values;
+
+  const client = isAuthenticated();
 
   const handleChange = name => event => {
     setValue({...values, [name]: event.target.value, error: false, success: false });
@@ -44,6 +46,9 @@ const Signin = () => {
 
   return (
     <Layout title='Signin'>
+      {
+        client && showError('You already Signed in or you might not have an authorization for accessing this resource.')
+      }
       {showLoading(loading)}
       {showError(error)}
       {showSuccess(success)}
