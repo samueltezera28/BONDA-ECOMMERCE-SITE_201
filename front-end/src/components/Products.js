@@ -42,25 +42,25 @@ const Products = () => {
   return (
     <Layout>
       <CategoryNav />
-    <div className="container mt-5 mb-5">
-      <h4>New Arrival</h4>
-      <div className="row ">
-        {
-          productByArrival.map((product, index) => (
-            <Card key={index} product={product} />
-          ))
-        }
-      </div>
-      <hr />
-      <h4>Best Sellers</h4>
-      <div className="row">
-        {
-            productBySell.map((product, index) => (
+      <div className="container mt-5 mb-5">
+        <h4>New Arrival</h4>
+        <div className="row ">
+          {
+            productByArrival.map((product, index) => (
               <Card key={index} product={product} />
-        ))
-        }
+            ))
+          }
+        </div>
+        <hr />
+        <h4>Best Sellers</h4>
+        <div className="row">
+          {
+              productBySell.map((product, index) => (
+                <Card key={index} product={product} />
+          ))
+          }
+        </div>
       </div>
-    </div>
     </Layout>
   );
 }

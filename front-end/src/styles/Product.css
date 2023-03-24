@@ -15,3 +15,13 @@
 .card-p {
   text-align: center;
 }
+
+.mob-cat-nav {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mob-cat-nav {
+    display: block;
+  }
+}
