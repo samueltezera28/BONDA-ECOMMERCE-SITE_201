@@ -1,78 +1,32 @@
 import React from "react";
 
-const Dashboard = ({ name, email, role }) => {
-  
-  return (
-    <div className="container">
-      <div className="dash hor-c-a">
+const Dashboard = (data) => {
 
-      <div className="info">
-          <h4>My Account</h4>
-          <div className="info-t">
-            <div className="info-l">
-              <ul>
-                <li>
-                  <label>Name</label>
-                </li>
-                <li>
-                  <label>Email</label>
-                </li>
-                <li>
-                  <label>Role</label>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="info-r">
-              <ul>
-                <li>
-                  <span>{name}</span>
-                </li>
-                <li>
-                  <span>{email}</span>
-                </li>
-                <li>
-                  <span>{role && role === 1 ? 'Admin' : 'User'}</span>
-                </li>
-              </ul>  
-            </div>
-          </div>
+  const DashTable = ({info: {title, data}}) => {
+    return (
+      <div className="dash-table">
+        <div class="bg-dark dash-head">
+          <h4>{title}</h4>
         </div>
-
-      <div className="info">
-          <h4>Account Manager</h4>
-          <div className="info-t">
-            <div className="info-l">
-              <ul>
-                <li>
-                  <label>Update Profile</label>
-                </li>
-                <li>
-                  <label>Cart</label>
-                </li>
-                <li>
-                  <label>History</label>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="info-r">
-              <ul>
-                <li>
-                  <span>{name}</span>
-                </li>
-                <li>
-                  <span>{email}</span>
-                </li>
-                <li>
-                  <span>{role}</span>
-                </li>
-              </ul>  
-            </div>
-          </div>
-        </div>
-
+        <table class="table table-striped table-hover">
+          <tbody>
+            {
+              data.map((data, i) => (
+                <tr class="table-secondary">
+                  <td>{data.name}</td>
+                  <th scope="row">{data.value}</th>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
       </div>
+    )
+  }
+
+  return (
+    <div className="container mt-5 mb-5">
+      <DashTable info={data} />
     </div>
   )
 }

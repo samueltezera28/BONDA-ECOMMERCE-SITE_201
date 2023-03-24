@@ -3,13 +3,13 @@
   justify-content: space-between;
   margin: auto;
   background-color: #393E46;
-  color: white;
+  color: #ECF2FF;
   height: 50px;
 }
 
 .nav-t a {
   text-decoration: none;
-  color: white;
+  color: #ECF2FF;
 }
 
 .nav-b {
