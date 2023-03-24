@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../core/Layout";
 import { getProducts } from '../core/APICore'
 import Card from "./Card";
-
+import CategoryNav from "./CategoryNav";
 
 const Products = () => {
 
@@ -41,6 +41,7 @@ const Products = () => {
 
   return (
     <Layout>
+      <CategoryNav />
     <div className="container mt-5 mb-5">
       <h4>New Arrival</h4>
       <div className="row ">

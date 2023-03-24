@@ -5,14 +5,14 @@ const Dashboard = (data) => {
   const DashTable = ({info: {title, data}}) => {
     return (
       <div className="dash-table">
-        <div class="bg-dark dash-head">
+        <div className="bg-dark dash-head">
           <h4>{title}</h4>
         </div>
-        <table class="table table-striped table-hover">
+        <table className="table table-striped table-hover">
           <tbody>
             {
               data.map((data, i) => (
-                <tr class="table-secondary">
+                <tr className="table-secondary" key={i}>
                   <td>{data.name}</td>
                   <th scope="row">{data.value}</th>
                 </tr>
@@ -25,9 +25,7 @@ const Dashboard = (data) => {
   }
 
   return (
-    <div className="container mt-5 mb-5">
       <DashTable info={data} />
-    </div>
   )
 }
 

@@ -54,7 +54,9 @@ const Nav = () => {
                   <i className="fa-solid fa-user" id="user-dashboard"></i>
               </li>
             ) :
-              <div id="user-dashboard"></div>
+              <>
+                <div id="user-dashboard"></div>
+              </>
             }
           </ul>  
         </div>

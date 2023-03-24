@@ -83,6 +83,10 @@
     font-size: x-small;
 }
 
+.mob-out {
+    display: none;
+}
+
 @media only screen and (max-width: 950px) {
     .hidden-dashboard {
         top: 110px;
@@ -124,10 +128,8 @@
     .b-bar {
         display: block;
     }
-}
 
-@media only screen and (max-width: 180px) {
-    .b-bar .b-tab span{
-        display: none;
+    .mob-out {
+        display: block;
     }
 }

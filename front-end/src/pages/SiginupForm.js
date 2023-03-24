@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { loadingMode } from "../user/Message";
 
 const SignupForm = ({ name, email, password }, handleChange, clickSubmit) => (
@@ -30,6 +31,9 @@ const SignupForm = ({ name, email, password }, handleChange, clickSubmit) => (
       </div>
     </div>
     <button type="submit" className="btn btn-primary btn-block" style={loadingMode}>Sign up</button>
+    <Link to='/signin'>
+        <button className="btn btn-secondary btn-block mt-4">Signin</button>
+      </Link>
   </form>
 </div>
 );
