@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "641adf2c821f7a7a41284d80"
+  },
+  "name": "user",
+  "email": "user@gmail.com",
+  "hashed_password": "27e66bc58e901e771815d2b581e0ee3837830f5c",
+  "salt": "624dc5a0-c8a0-11ed-b72f-a9666b7d592a",
+  "role": 0,
+  "history": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679482668799"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679482668799"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641ae0497bf087390ff887a3"
+  },
+  "name": "admin",
+  "email": "admin@gmail.com",
+  "hashed_password": "13396ef2c48469da57f05eb9cd076b117b227384",
+  "salt": "0c41eb90-c8a1-11ed-99e6-bb06badb59a9",
+  "role": 1,
+  "history": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679482953933"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679482953933"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641afaa49e9159f650a98472"
+  },
+  "name": "Jeremy.T",
+  "email": "ermaatekk@gmail.com",
+  "hashed_password": "e94831173b3424ac4ece4c5e511a37b8cc9ca25c",
+  "salt": "c1c584e0-c8b0-11ed-a728-110e446b8594",
+  "role": 0,
+  "history": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679489700913"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679489700913"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641caee296fca537d030c469"
+  },
+  "name": "old",
+  "email": "old@gmail.com",
+  "hashed_password": "3ffdefe855d2870ea6e925fb702a21d4e2148139",
+  "salt": "c6ff74c0-c9b4-11ed-bb5d-43506a396f24",
+  "role": 0,
+  "history": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679601378830"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679601378830"
+    }
+  },
+  "__v": 0
+}]
