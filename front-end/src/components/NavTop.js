@@ -111,7 +111,7 @@ const NavTop = () => {
         <ul className="b-tab">
             {
                 mobile.map((tab, i) => (
-                    <li key={i}>
+                    <li key={i} className='tab-l'>
                         <Link to={tab.path} className='tab-info'>
                             {tab.icon}
                             <span>{tab.name}</span>
