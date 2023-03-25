@@ -29,11 +29,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(expressValidator());
-app.use(
-  cors({
-    origin: "http://localhost:5500",
-  })
-);
+app.use(cors());
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
