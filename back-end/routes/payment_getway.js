@@ -1,7 +1,8 @@
-// const express = require("express");
-// const router = express.Router();
-// const { strip_pay } = require("../controllers/paymet_getway");
+const express = require("express");
+const router = express.Router();
 
-// router.post("", strip_pay);
+const { stripPay } = require("../controllers/paymet_getway");
 
-// module.exports = router;
+router.post("/create-checkout-session", stripPay);
+
+module.exports = router;
