@@ -28,10 +28,7 @@ const Card = ({product}) => {
         </div>
 
           <div className="card-b">
-            <Link to="/">
-              <button className="btn btn-outline-primary">View Product</button>
-            </Link>
-            <i className="fa-solid fa-plus" onClick={addToCart}></i>
+            <button className="btn btn-danger">Remove</button>
           </div>
 
         </div>

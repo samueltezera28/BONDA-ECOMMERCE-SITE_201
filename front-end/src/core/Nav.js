@@ -35,7 +35,7 @@ const Nav = () => {
         <div className="nav-r">
           <ul>
             <li>
-              <Link to='/products'>Products</Link>
+              <Link to='/shop'>Shop</Link>
             </li>
             {
               !isAuthenticated() &&
@@ -50,9 +50,14 @@ const Nav = () => {
             }
 
             {isAuthenticated() ? (
+              <>
+              <li>
+              <Link to='/cart'>Cart</Link>
+              </li>
               <li>
                   <i className="fa-solid fa-user" id="user-dashboard"></i>
               </li>
+              </>
             ) :
               <>
                 <div id="user-dashboard"></div>

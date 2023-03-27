@@ -24,8 +24,8 @@ const UserDashboard = () => {
         <Link to='/'><button className="btn btn-info mb-2 mx-1">Update</button></Link>
       </> },
       {name: 'Cart', value: <>
-      <Link to='/'><button className="btn btn-primary mb-2 mx-1">Check</button></Link>
-      <Link to='/'><button className="btn btn-warning mb-2 mx-1">Status</button></Link>
+      <Link to='/cart'><button className="btn btn-primary mb-2 mx-1">Check</button></Link>
+      <Link to='/cart'><button className="btn btn-warning mb-2 mx-1">Status</button></Link>
       </>},
       {name: 'History', value: <>
       <Link to='/'><button className="btn btn-primary mb-2 mx-1">See</button></Link>
