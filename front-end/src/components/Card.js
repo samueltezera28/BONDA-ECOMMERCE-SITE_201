@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PhotoLoad from "./PhotoLoad";
 import Check from "./Check";
 import { addItem } from "./cartHelper";
+import { showSuccess } from '../user/Message'
 
 const Card = ({product}) => {
 
@@ -10,6 +11,7 @@ const Card = ({product}) => {
     addItem(product, () => {
       console.log('product added to cart')
     })
+    showSuccess('Product added to cart');
   }
   return (
     <div className="col-xl-3 col-lg-4 col-sm-6 mb-2">
@@ -31,7 +33,7 @@ const Card = ({product}) => {
             <Link to="/">
               <button className="btn btn-outline-primary">View Product</button>
             </Link>
-            <i className="fa-solid fa-plus" onClick={addToCart}></i>
+            <i className="fa-solid fa-plus add" onClick={addToCart}></i>
           </div>
 
         </div>

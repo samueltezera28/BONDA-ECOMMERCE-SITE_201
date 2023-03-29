@@ -26,6 +26,22 @@ const getCart = () => {
   return [];
 };
 
+const removeItem = productId => {
+  let cart = [];
+  if (typeof window !== 'undefined') {
+      if (localStorage.getItem('cart')) {
+          cart = JSON.parse(localStorage.getItem('cart'));
+      }
 
+      cart.map((product, i) => {
+          if (product._id === productId) {
+              cart.splice(i, 1);
+          }
+      });
 
-export { addItem, getCart }
+      localStorage.setItem('cart', JSON.stringify(cart));
+  }
+  return cart;
+};
+
+export { addItem, getCart, removeItem }

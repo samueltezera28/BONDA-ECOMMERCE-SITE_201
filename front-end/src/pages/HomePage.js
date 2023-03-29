@@ -18,7 +18,7 @@ const HomePage = () => {
                 on All Your
                 Favorite Clothes
               </h2>
-              <Link to='/shop'>
+              <Link to='/products'>
                 <button type="button" className="btn btn-warning" data-mdb-ripple-color="light">Shop Now</button>
               </Link>
             </div>

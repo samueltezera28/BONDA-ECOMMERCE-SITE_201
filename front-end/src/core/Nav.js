@@ -35,7 +35,7 @@ const Nav = () => {
         <div className="nav-r">
           <ul>
             <li>
-              <Link to='/shop'>Shop</Link>
+              <Link to='/products'>Shop</Link>
             </li>
             {
               !isAuthenticated() &&

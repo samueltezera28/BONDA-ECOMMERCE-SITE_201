@@ -25,3 +25,6 @@
     display: block;
   }
 }
+.add:hover {
+  cursor: pointer;
+}
