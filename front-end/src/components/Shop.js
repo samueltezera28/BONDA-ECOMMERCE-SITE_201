@@ -15,7 +15,7 @@ const Shop = () => {
 
   // console.log(searchParams.get('cid'));
   const init = () => {
-    getFilteredProducts(0, 6, { category: [searchParams.get('cid')] })
+    getFilteredProducts(0, 20, { category: [searchParams.get('cid')] })
     .then((data) => {
       if (data.error) {
         setError(data.error);

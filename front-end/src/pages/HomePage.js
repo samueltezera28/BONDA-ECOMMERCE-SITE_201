@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Products from '../components/Products';
 import Card from '../components/Card';
 import { BestSeller, NewProduct } from '../components/FeaturedProducts';
@@ -17,7 +18,9 @@ const HomePage = () => {
                 on All Your
                 Favorite Clothes
               </h2>
-              <button type="button" className="btn btn-warning" data-mdb-ripple-color="light">Shop Now</button>
+              <Link to='/shop'>
+                <button type="button" className="btn btn-warning" data-mdb-ripple-color="light">Shop Now</button>
+              </Link>
             </div>
           </div>
         </div>

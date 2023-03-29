@@ -46,7 +46,7 @@ const Footer = () => {
             <h4>online shop</h4>
             <ul>
               <li>
-                <a href="#">watch</a>
+                <a href="#">Jacket</a>
               </li>
               <li>
                 <a href="#">bag</a>
