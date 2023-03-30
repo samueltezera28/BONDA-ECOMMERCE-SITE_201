@@ -30,7 +30,7 @@ const Card = ({product}) => {
         </div>
 
           <div className="card-b">
-            <Link to="/">
+            <Link to="/products">
               <button className="btn btn-outline-primary">View Product</button>
             </Link>
             <i className="fa-solid fa-plus add" onClick={addToCart}></i>

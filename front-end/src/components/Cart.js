@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../core/Layout';
-import { getCart } from './cartHelper';
+import { getCart, getPrice } from './cartHelper';
 import CartCard from './CartCard';
 
 const Cart = () => {
     const [items, setItems] = useState([]);
     const [run, setRun] = useState(false);
+    const [total, setTotal] = useState(0);
 
     useEffect(() => {
         setItems(getCart());
-    }, [run]);
+        totalPrice();
+    }, []);
 
     const showItems = items => {
         return (
@@ -30,11 +32,20 @@ const Cart = () => {
         </h2>
     );
 
+    const totalPrice = async () => {
+        setTotal(await getPrice())
+    }
+
     return (
         <Layout
             title="Shopping Cart"
         >
           <div className='container mt-5 mb-5'>
+                {
+                    total !== 0 && <button className='btn btn-warning mb-2'>Proceed to Checkout</button>
+                }
+
+                <h5>Total Price <span>{total}</span></h5>
             {items.length > 0 ? showItems(items) : noItemsMessage()}
           </div>
         </Layout>

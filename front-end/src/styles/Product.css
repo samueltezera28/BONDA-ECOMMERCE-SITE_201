@@ -25,6 +25,16 @@
     display: block;
   }
 }
+.add {
+  background-color: rgb(224, 211, 33);
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.add:active {
+  background-color: rgb(142, 24, 24);
+  color: white;
+}
 .add:hover {
   cursor: pointer;
 }
