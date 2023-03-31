@@ -10,7 +10,6 @@ const categorySchema = new mongoose.Schema({
 	unique:true,
     }
 
-   
 },{timeStamp:true}
 );
 module.exports= mongoose.model("Category", categorySchema);
