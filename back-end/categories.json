@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "641ae0ba7bf087390ff887a9"
+  },
+  "name": "Top Wear",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641ae1ce7bf087390ff887be"
+  },
+  "name": "Bottom Wear",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641ae1d37bf087390ff887c1"
+  },
+  "name": "Foot Wear",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641ae7797bf087390ff88848"
+  },
+  "name": "Full set wear",
+  "__v": 0
+}]
