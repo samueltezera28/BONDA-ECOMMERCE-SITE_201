@@ -26,6 +26,26 @@ const HomePage = () => {
         </div>
       </div>
 
+      <section id="features">
+        <div class="row features">
+            <div class="fea col-lg-4">
+                <i class="icon fa-solid fa-check fa-4x"></i>
+                <h3>Easy to use</h3>
+                <p>So easy to use, its only take seconds</p>
+            </div>
+            <div class="fea col-lg-4">
+                <i class="icon fa-solid fa-shirt fa-4x"></i>
+                <h3>Stylish</h3>
+                <p>All kinds of styles are avalible</p>
+            </div>
+            <div class="fea col-lg-4">
+                <i class="icon fa-solid fa-money-check-dollar fa-4x"></i>
+                <h3>Money back Guarantee</h3>
+                <p>You can return our products in 48 hours</p>
+            </div>
+        </div>
+    </section>
+
       <div className='best-s'>
         <h3>New Arrival</h3>
         <BestSeller />
@@ -36,6 +56,13 @@ const HomePage = () => {
         <NewProduct />
       </div>
 
+      <section id="cta">
+
+      <h3 class="find" style={{color: "black"}}>Screw fast fashion, <br /> shop secondhand</h3>
+      <Link to='/products'>
+      <button type="button" class="btn btn-dark">Shop now</button>
+      </Link>
+      </section>
     </div>
   );
 }

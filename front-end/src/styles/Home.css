@@ -1,3 +1,9 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.5;
+}
 .home {
   color: whitesmoke;
 }
@@ -9,7 +15,7 @@
 }
 
 .ban-1 {
-  height: 400px;
+  height: 100%;
   width: 100%;
   background-image: url('https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1628&q=80');
   background-position: bottom;
@@ -68,7 +74,7 @@
 }
 
 .h-line {
-  background-color: red;
+  background-color: rgb(212, 210, 210);
   margin: 0;
   padding: 1rem;
 }
@@ -125,4 +131,45 @@
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start { 
 transform: translateX(0);
+}
+.features {
+  padding: 7% 15%;
+  text-align: center;
+  background-color: #fff;
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+
+.fea {
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+.icon {
+  color: #4d4f4f;
+  margin-bottom: 5%;
+}
+
+.icon:hover {
+  color: #5e6464;
+}
+
+#cta {
+  background-color: #f1f0ef;
+  ;
+  padding: 7% 7%;
+  text-align: center;
+}
+
+.find {
+  color: #fff;
+  font-weight: 900;
+  font-size: 4rem;
+  padding-bottom: 2rem;
+  ;
+}
+
+.about {
+  height: 20%;
 }
