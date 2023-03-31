@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# -BONDA-ECOMMERCE-SITE_201
-=======
 # BONDA ECOMMERCE WEBSITE
 
 <a href="http://eyasuyid.github.io/bonda" target="_blank">![image](https://user-images.githubusercontent.com/87242555/206868960-be6c0047-8ba0-4933-b502-b00cdeafbd1f.png)</a>
