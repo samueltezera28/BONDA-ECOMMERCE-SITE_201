@@ -5,9 +5,9 @@
 
 <a href="http://eyasuyid.github.io/bonda" target="_blank">![image](https://user-images.githubusercontent.com/87242555/206868960-be6c0047-8ba0-4933-b502-b00cdeafbd1f.png)</a>
 
-Our project helps people to buy and sell clothes quickly. Our team members are Eyuel Tekle, Samuel Tezera, and myself. As software engineers, we focus on developing light, responsive, and friendly web-app. Samuel worked on developing the API and Database system, Eyuel worked on project management and the landing page, and I worked on developing the Front-end (React), integrating and testing the API on the Front-end.
+Our project helps people to buy and sell clothes quickly. Our team members are Eyuel Tekle, Samuel Tezera, and Eyasu Yidnekachew. As software engineers, we focus on developing light, responsive, and friendly web-app. Samuel worked on developing the API and Database system, Eyuel worked on project management and the landing page, and Eyasu worked on developing the Front-end (React), integrating and testing the API on the Front-end.
 #
-I am one of those guys who take half a day to shop for clothes. It is tough for me to get my desired clothes. So do my partners. In developing countries, especially in Ethiopia, second-hand clothes beat the market. Due to this, we decided to change this market to online. Our project can reduce the time taken to shop and choose clothes, and transport to.
+We are one of those guys who take half a day to shop for clothes. It is tough for me to get my desired clothes. So do my partners. In developing countries, especially in Ethiopia, second-hand clothes beat the market. Due to this, we decided to change this market to online. Our project can reduce the time taken to shop and choose clothes, and transport to.
 #
 ![image](https://user-images.githubusercontent.com/87242555/206869122-c72162f1-5143-467d-ba80-366325be05d0.png)
 
