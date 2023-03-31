@@ -1,0 +1,12 @@
+.dash-head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 0;
+}
+
+.dash-head h4 {
+  color: #ECF2FF;
+  margin: auto;
+}

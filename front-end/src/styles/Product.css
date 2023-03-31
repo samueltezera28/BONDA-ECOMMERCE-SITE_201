@@ -1,0 +1,40 @@
+.cat-nav {
+  background-color: black;
+}
+
+.card-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-body i {
+  font-size: xx-large;
+}
+
+.card-p {
+  text-align: center;
+}
+
+.mob-cat-nav {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mob-cat-nav {
+    display: block;
+  }
+}
+.add {
+  background-color: rgb(224, 211, 33);
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.add:active {
+  background-color: rgb(142, 24, 24);
+  color: white;
+}
+.add:hover {
+  cursor: pointer;
+}

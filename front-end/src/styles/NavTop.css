@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mobile {
+    width: 100%;
+    display: none;
+    z-index: 5;
+    background-color: #393E46;
+}
+
+.mobile a {
+    color: #ECF2FF;
+}
+
+.mobile i {
+    color: #ECF2FF;
+    font-size: x-large;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #393E46;
+}
+
+.nav .show-tab a, .nav .title {
+    color: #ECF2FF;
+}
+
+.hidden-dashboard {
+    display: none;
+    background-color: #393E46;
+    border-radius: 20px;
+    box-shadow: 10px 5px 10px 5px #636262;
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    width: 200px;
+    z-index: 2000;
+}
+
+.hidden-dashboard ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-dashboard a {
+    color: #ECF2FF;
+}
+
+.b-bar {
+    display: none;
+    height: 45px;
+    width: 100%;
+    background-color: #ECF2FF;;
+    position: fixed;
+    bottom: 0;
+    z-index: 2000;
+}
+
+.b-tab .tab-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tab-info {
+    color: #393E46
+}
+
+.tab-info i {
+    font-size: large;
+}
+
+.tab-info span {
+    font-size: x-small;
+}
+
+.mob-out {
+    display: none;
+}
+
+@media only screen and (max-width: 950px) {
+    .hidden-dashboard {
+        top: 110px;
+    }
+    
+    .mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-l .name {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 45px;
+        width: 20%;
+        box-shadow: 5px 2px 5px 2px #636262;
+        z-index: 2000;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .nav .title {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .mobile .more {
+        display: none;
+    }
+    .b-bar {
+        display: block;
+    }
+
+    .mob-out {
+        display: block;
+    }
+}
