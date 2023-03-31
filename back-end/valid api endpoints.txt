@@ -1,0 +1,28 @@
+valid API
+
+1)Post http://localhost:8000/api/signup
+2)Post http://localhost:8000/api/signin
+3)GET  http://localhost:8000/api/signout
+
+
+4)Post   http://localhost:8000/api/category/create/:userId
+5)GET    http://localhost:8000/api/category/:categoryId  ( loads specific category based on its id)
+6)Delete http://localhost:8000/api/category/:categoryId/:userId
+7)Put    http://localhost:8000/api/category/:categoryId/:userId (update catagory)
+8)GET    http://localhost:8000/api/categories
+
+
+9)Post    http://localhost:8000/api/product/create/:userId
+10)Delete http://localhost:8000/api/product/:ProductId/:userId
+11)Put 	  http://localhost:8000/api/product/:ProductId/:userId
+12)Get    http://localhost:8000/api/products  (bad performans)
+13)Get    http://localhost:8000/api/products/categories  (catagories of each product )
+14)Get    http://localhost:8000/api/products/related/:productId
+15)get    http://localhost:8000/api/product/photo/:productId  (loads specific photo)
+16GET     http://localhost:8000/api/product/:productId
+17Post     http://localhost:8000/api/products/by/search
+
+
+18)GET    http://localhost:8000/api/user/:userId (loads user profile information)
+19)put    http://localhost:8000/api/user/:userId (update user profile)
+
